@@ -68,7 +68,7 @@ export default Vue.extend({
       return h('iframe', {
         staticClass: 'q-pdfviewer__iframe',
         attrs: {
-          src: 'pdfjs/web/viewer.html?file=' + this.src
+          src: 'https://api.campusx.co.id/pdfjs/web/viewer.html?file=' + this.src
         }
       }, [
         // iframe not supported either, give user a link to download
