@@ -8,6 +8,7 @@ export default Vue.extend({
 
   props: {
     src: String,
+    baseURL: String,
     type: {
       type: String,
       default: 'html5',
@@ -68,7 +69,7 @@ export default Vue.extend({
       return h('iframe', {
         staticClass: 'q-pdfviewer__iframe',
         attrs: {
-          src: 'https://api.campusx.co.id/pdfjs/web/viewer.html?file=' + this.src
+          src: this.baseURL + '/pdfjs/web/viewer.html?file=' + this.src
         }
       }, [
         // iframe not supported either, give user a link to download
